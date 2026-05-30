@@ -116,21 +116,7 @@ erDiagram
         datetime changed_at
     }
 
-    notification {
-        bigint id PK
-        bigint tenant_id
-        bigint user_id FK
-        varchar type
-        varchar title
-        text body
-        bigint issue_id FK
-        bigint triggered_by FK
-        boolean is_read
-        datetime read_at
-        varchar channel
-        datetime sent_at
-        datetime created_at
-    }
+  
 
     issue_event_detail {
         bigint id PK
@@ -172,7 +158,7 @@ erDiagram
     issue ||--o{ issue_tag : "tags"
     issue ||--o{ issue_member : "team roster"
     issue ||--o{ issue_status_history : "status audit trail"
-    issue ||--o{ notification : "triggers notifications"
+   
 
     issue ||--|| issue_event_detail : "event-only fields"
     issue ||--|| issue_matter_detail : "matter-only fields"
