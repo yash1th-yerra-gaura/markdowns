@@ -100,20 +100,7 @@ erDiagram
         datetime updated_at
     }
 
-    notification {
-        bigint id PK
-        bigint tenant_id
-        bigint user_id FK
-        bigint issue_id FK
-        bigint triggered_by FK
-        varchar type
-        varchar title
-        text body
-        boolean is_read
-        datetime read_at
-        varchar channel
-        datetime created_at
-    }
+   
 
     issue_status ||--o{ issue : "status vocabulary"
 
@@ -123,5 +110,5 @@ erDiagram
     issue ||--o{ issue_attachment : "attachments"
     issue ||--o{ issue_schedule : "schedules"
     issue ||--o{ issue_tag : "tags"
-    issue ||--o{ notification : "notifications"
+    
 ```
