@@ -61,8 +61,6 @@ erDiagram
     enum priority
     bigint assignee_id FK
     datetime due_at
-    datetime event_at
-    datetime closed_at
     bigint created_by FK
     bigint updated_by FK
     datetime created_at
